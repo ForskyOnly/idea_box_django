@@ -1,0 +1,252 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+main {
+    width: 60%;
+    margin: auto;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.content-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+div .idea {
+    background-color: #ffdb5e;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+header {
+    background-color: #35424a;
+    color: #ffffff;
+    padding-top: 30px;
+    min-height: 70px;
+    border-bottom: #e8491d 3px solid;
+}
+
+header a {
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+header li {
+    float: left;
+    display: inline;
+    padding: 0 20px 0 20px;
+}
+
+header #branding {
+    float: left;
+}
+
+header #branding h1 {
+    margin: 0;
+}
+
+header nav {
+    float: right;
+    margin-top: 10px;
+}
+
+header .highlight,
+header .current a {
+    color: #e8491d;
+    font-weight: bold;
+}
+
+header a:hover {
+    color: #cccccc;
+    font-weight: bold;
+}
+
+.ideas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+.idea {
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 2rem;
+}
+
+.idea h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #35424a;
+}
+
+.idea p {
+    margin-bottom: 10px;
+}
+
+.votes {
+    display: flex;
+    justify-content: space-between;
+}
+
+form {
+    display: inline;
+}
+
+button {
+    background-color: #35424a;
+    color: #ffffff;
+    border: none;
+    padding: 7px 20px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+button:hover {
+    background-color: #e8491d;
+}
+
+.sorting {
+    margin: 1rem 0;
+}
+
+a {
+    color: #35424a;
+    text-decoration: none;
+}
+
+a:hover,
+a:focus {
+    color: #e8491d;
+}
+
+.submit-idea {
+    background-color: #ffdb5e;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    width: 100%;
+    max-width: 400px;
+    height: 400px;
+    margin-top: 2rem;
+}
+
+.submit-idea h3 {
+    font-size: 24px;
+    margin:auto;
+    color: #35424a;
+    text-align: center;
+}
+
+.submit-idea form {
+    display: flex;
+    flex-direction: column;
+}
+
+.submit-idea form input,
+.submit-idea form textarea,
+.submit-idea form select {
+    display: block;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 1rem;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.submit-idea form label {
+    font-weight: bold;
+    color: #35424a;
+}
+
+.submit-idea button {
+    background-color:#35424a;
+    color: #ffffff;
+    border: none;
+    padding: 7px 20px;
+    cursor: pointer;
+    border-radius: 3px;
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: -10px;
+}
+
+.submit-idea button:hover {
+    background-color: #e8491d;
+}
+
+.submit-idea p {
+    text-align: center;
+    color: #35424a;
+}
+
+.submit-idea p a {
+    text-decoration: underline;
+    color: #e8491d;
+}
+
+.submit-idea p a:hover {
+    color: #35424a;
+}
+
+.submit-idea form textarea {
+    resize: none;
+}
+
+form input,
+form textarea,
+form select {
+    display: block;
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+form label {
+    font-weight: bold;
+}
+
+footer {
+    padding: 20px;
+    margin-top: 40px;
+    background-color: #35424a;
+    color: #ffffff;
+    text-align: center;
+    border-top: #e8491d 3px solid;
+}
+
+ul.errorlist {
+    overflow: hidden;
+}
+
+@media (max-width: 768px) {
+    header #branding,
+    header nav,
+    header nav li {
+        float: none;
+        text-align: center;
+    }
+
+    header nav li {
+        padding: 5px 0;
+    }
+}

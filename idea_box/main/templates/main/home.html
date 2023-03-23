@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="sorting">
+    {% if request.user.is_authenticated %}
+    Trier par :
+    <a href="?sort_by=date">Date</a> |
+    <a href="?sort_by=best">Meilleures idées</a>
+    {% else %}
+    {% endif %}
+</div>
+</div>
+<div class="content-wrapper">
+    <div class="ideas">
+        {% for idea in ideas %}
+            <div class="idea">
+                <h3>{{ idea.title }}</h3>
+                <p>{{ idea.description }}</p>
+                <p>Proposé(e) par {{ idea.user.username }}</p>
+                <p>Le: {{ idea.date|date:"d F Y" }}</p>
+                <div class="votes">
+                    {% if request.user.is_authenticated %}
+                        <form method="post">
+                            {% csrf_token %}
+                            <input type="hidden" name="idea_id" value="{{ idea.id }}">
+                            <input type="hidden" name="vote_type" value="UP">
+                            <button type="submit"> 👍 ({{ idea.good }})</button>
+                        </form>
+                        <form method="post">
+                            {% csrf_token %}
+                            <input type="hidden" name="idea_id" value="{{ idea.id }}">
+                            <input type="hidden" name="vote_type" value="DOWN">
+                            <button type="submit">👎 ({{ idea.bad }})</button>
+                        </form>
+                    {% else %}
+                    {% endif %}
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+    <div class="submit-idea">
+        {% if request.user.is_authenticated %}
+            <h3>Proposez votre idée :</h3>
+            <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit">Proposer</button>
+            </form>
+        {% else %}
+            <p><a href="{% url 'login' %}">Connectez-vous</a> pour proposer des idées</p>
+        {% endif %}
+    </div>
+    </div>
+    {% endblock %}
