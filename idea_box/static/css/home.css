@@ -235,8 +235,14 @@ footer {
 }
 
 ul.errorlist {
-    overflow: hidden;
+    display: none;
+      
 }
+
+.errorlist {
+    display: none;
+  }
+  
 
 @media (max-width: 768px) {
     header #branding,
