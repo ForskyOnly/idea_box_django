@@ -7,7 +7,7 @@ body {
 }
 
 main {
-    width: 60%;
+    width: 90%;
     margin: auto;
 }
 
@@ -48,23 +48,10 @@ header li {
     padding: 0 20px 0 20px;
 }
 
-header #branding {
-    float: left;
-}
-
-header #branding h1 {
-    margin: 0;
-}
 
 header nav {
     float: right;
     margin-top: 10px;
-}
-
-header .highlight,
-header .current a {
-    color: #e8491d;
-    font-weight: bold;
 }
 
 header a:hover {
@@ -107,6 +94,8 @@ header a:hover {
 
 form {
     display: inline;
+    margin-top: 20px;
+  
 }
 
 button {
@@ -130,6 +119,23 @@ a {
     color: #35424a;
     text-decoration: none;
 }
+#userinfo{
+    padding-top: 30px;
+    margin: 0px;
+    font-size: 14px;
+}
+.entete{
+    margin-top: 40px;
+    background-color: #ffdb5e     ;
+    border-bottom: #e8491d  3px solid;
+    justify-content: center;
+}
+.idbox{
+    text-align: center;
+    color: #35424a;
+    font-size: 45px;  
+    font-weight: bold;
+}
 
 a:hover,
 a:focus {
@@ -143,7 +149,7 @@ a:focus {
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     width: 100%;
     max-width: 400px;
-    height: 400px;
+    height: 430px;
     margin-top: 2rem;
 }
 

@@ -1,5 +1,12 @@
 {% extends 'base.html' %}
 
+
+{% block entete %}
+<div class="entete">
+    <h1 class="idbox">Les Idées </h1>
+</div>
+{% endblock entete %}
+
 {% block content %}
 <div class="sorting">
     {% if request.user.is_authenticated %}
@@ -14,10 +21,7 @@
     <div class="ideas">
         {% for idea in ideas %}
             <div class="idea">
-                <h3>{{ idea.title }}</h3>
                 <p>{{ idea.description }}</p>
-                <p>Proposé(e) par {{ idea.user.username }}</p>
-                <p>Le: {{ idea.date|date:"d F Y" }}</p>
                 <div class="votes">
                     {% if request.user.is_authenticated %}
                         <form method="post">
@@ -26,6 +30,7 @@
                             <input type="hidden" name="vote_type" value="UP">
                             <button type="submit"> 👍 ({{ idea.good }})</button>
                         </form>
+                        <p id="userinfo">Par {{ idea.user.username }} le {{ idea.date|date:"d F Y" }}</p>
                         <form method="post">
                             {% csrf_token %}
                             <input type="hidden" name="idea_id" value="{{ idea.id }}">

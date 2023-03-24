@@ -28,7 +28,6 @@ def home_page(request):
         if vote_type and idea_id:
             idea = get_object_or_404(Idea, pk=idea_id)
             user_vote = Vote.objects.filter(user=request.user, idea=idea).first()
-
             if user_vote:
                 if user_vote.vote != vote_type:
                     if vote_type == "UP":
